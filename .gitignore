@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.env/
+
+# Gradio / temp
+.gradio/
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Large models (optional)
+*.pt

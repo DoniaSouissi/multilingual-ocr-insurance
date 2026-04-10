@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build:
+      context: ./APIs
+      dockerfile: Dockerfile
+    container_name: fastapi_service
+    ports:
+      - "8000:8000"
+    networks:
+      - ocr-net
+    volumes:
+      - ./best.pt:/APIs/best.pt
+      - ./best_detect.pt:/APIs/best_detect.pt
+      - ./frozen_east_text_detection.pb:/APIs/frozen_east_text_detection.pb
+
+
+  streamlit:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    container_name: streamlit_ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - fastapi
+    environment:
+      - API_URL=http://fastapi:8000/full-pipeline/pipeline_ocr
+    networks:
+      - ocr-net
+
+networks:
+  ocr-net:
+    driver: bridge
