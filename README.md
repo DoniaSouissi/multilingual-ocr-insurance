@@ -4,7 +4,7 @@
 ![Framework](https://img.shields.io/badge/Framework-FastAPI%20%7C%20Streamlit-red)
 ![AI-Models](https://img.shields.io/badge/AI-YOLOv11%20%7C%20TrOCR%20%7C%20Mistral-green)
 
-## 📌 Project OverviewT
+## 📌 Project Overview
 This system automates data extraction from bilingual (Arabic and French) car accident reports. By combining advanced computer vision and deep learning, the solution identifies document structures, distinguishes between handwritten and printed text, and performs high-accuracy OCR to streamline insurance claim management.
 
 ### Key Features
