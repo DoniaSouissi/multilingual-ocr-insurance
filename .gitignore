@@ -15,5 +15,6 @@ venv/
 # Logs
 *.log
 
-# Large models (optional)
+# Large models 
 *.pt
+*.pb
